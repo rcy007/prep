@@ -1,0 +1,110 @@
+You are writing a deep technical learning document for me.
+
+Goal:
+Create a single long-form, high-quality learning guide for [TOPIC] that reads like a technical novel: coherent, progressive, and deeply explanatory. I should be able to read it end-to-end and build strong intuition, not just memorize features.
+
+Audience:
+Senior engineer level. Assume I can handle internals, tradeoffs, and operational detail.
+Background context: [MY_BACKGROUND] (example: strong in Redshift, new to Databricks).
+Primary cloud/context default: [AWS/Azure/GCP] (default to AWS if not specified).
+
+Output file:
+Return only one final Markdown document titled:
+# [TOPIC]: Deep Learning Guide for [AUDIENCE]
+No extra files unless I explicitly ask.
+
+If I provide multiple drafts:
+1. Pick the strongest draft as backbone (roughly 65-75%).
+2. Merge best parts from other drafts.
+3. Rewrite for clarity and coherence (do not stitch fragments mechanically).
+4. Remove duplicate or shallow sections.
+5. Keep narrative flow smooth between sections.
+
+Writing style requirements:
+1. Write like a technical story, not a disconnected reference manual.
+2. Prioritize causal explanations (A causes B causes C).
+3. Be deep but readable; avoid fluff, marketing language, and generic filler.
+4. Define terms once, then use them consistently.
+5. Use short examples that are diagnostic and production-shaped.
+6. Keep tone factual, rigorous, and pragmatic.
+7. Assume I want to “understand how it works under the hood.”
+
+Must-have structure:
+1. How to Read This Guide (4-hour or similar focused path).
+2. Core Mental Model (the “why” and architecture principles).
+3. Architecture internals.
+4. Compute/execution model.
+5. Storage/transaction internals.
+6. Performance mechanics and optimization levers.
+7. Data modification/change processing patterns.
+8. Governance and security model.
+9. Ingestion design options and tradeoffs.
+10. Streaming/incremental processing model (if relevant).
+11. Pipeline/orchestration model.
+12. Query language/dialect and migration gotchas (if relevant).
+13. IaC/deployment workflow (if relevant).
+14. Mental model shifts from [SOURCE_PLATFORM] -> [TOPIC] (if relevant).
+15. Operational playbooks and decision matrices.
+16. Migration checklist + glossary + first-30-days learning plan.
+17. Curated official references.
+
+For major technical sections, include this sub-structure:
+- What it is
+- Why it matters
+- How it works internally
+- [SOURCE_PLATFORM] mapping (if relevant)
+- How to validate in production
+- Common pitfalls
+- Self-check questions
+
+Mandatory additions:
+1. Decision matrix: choosing between major runtime/compute options.
+2. Decision matrix: choosing between major ingestion options.
+3. At least 4 practical diagnostic playbooks:
+   - Query slow
+   - Streaming lag/backlog (if relevant)
+   - Permission/governance denied
+   - Cost spike
+4. One minimal end-to-end scenario showing full flow (e.g., raw -> curated -> serving).
+5. Migration checklist.
+6. Glossary.
+7. First 30 days learning milestones.
+
+Depth requirements:
+1. Explain internals, not only API usage.
+2. Explicitly discuss failure modes and edge cases.
+3. Add tradeoff reasoning (latency vs cost vs complexity vs reliability).
+4. Explain what to measure/observe in production.
+5. Include anti-patterns and how to fix them.
+
+Quality and correctness requirements:
+1. Prefer official docs as primary sources.
+2. Third-party links only if uniquely useful; otherwise avoid.
+3. Ensure Markdown integrity:
+   - Valid heading hierarchy
+   - No broken code fences
+   - No accidental headings from inline comments
+   - TOC includes all final sections
+4. Ensure coherence:
+   - Each section transitions naturally from previous section.
+   - Add brief bridge paragraphs between major chapters.
+
+Formatting requirements:
+1. Use clean Markdown with tables/diagrams where helpful.
+2. Use Mermaid for architecture/dataflow/sequence diagrams when useful.
+3. Keep examples concise and realistic.
+4. Keep document long-form and comprehensive; do not over-compress.
+
+Output constraints:
+1. Output only final Markdown.
+2. Do not include planning notes or meta commentary.
+3. Do not ask me follow-up questions unless absolutely necessary.
+4. Make reasonable assumptions and state them briefly in the document where needed.
+
+Now generate the complete document for:
+Topic: [TOPIC]
+Audience: [AUDIENCE]
+Background: [MY_BACKGROUND]
+Source platform mapping (optional): [SOURCE_PLATFORM]
+Cloud context: [CLOUD]
+Special focus areas (optional): [FOCUS_AREAS]
